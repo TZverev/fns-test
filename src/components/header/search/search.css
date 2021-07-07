@@ -1,0 +1,38 @@
+
+.header__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    padding: 0 1.5em;
+    border:1px solid #D2D5DA;
+    margin: 0 1em 0 1em;
+    flex-grow: 1;
+}
+
+.search__input{
+    border: none;
+    line-height: 20px;
+    font-size: 16px;
+    padding: 1em 0;
+    flex-grow:1;
+}
+
+.search__input:focus {
+    outline: none;
+}
+
+.search__btn{
+    background-color: inherit;
+    outline: none;
+    border: none;
+}
+
+.search__btn:hover{
+    cursor: pointer;
+}
+
+.search__svg{
+    height: 1em;
+    width: 1em;
+}

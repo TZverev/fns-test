@@ -1,0 +1,41 @@
+/*pagination*/
+
+.pagination, .pagination__group{
+    display: flex;
+    align-items: center;
+  }
+
+  .pagination{
+    justify-content: space-between;
+  }
+
+.pagination__btn{
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+.pagination__btn--disabled{
+    color:#D2D5DA;
+}
+
+.pagination__ibtn{
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    width: 0.6em;
+    height:  0.6em;
+    border: none;
+    background-color: #D2D5DA;
+    margin: 0.4em;
+}
+
+.pagination__ibtn--low{
+    width: 0.4em;
+    height:  0.4em;
+}
+
+.pagination__ibtn--selected{
+    background-color: #005AAA;
+}
+

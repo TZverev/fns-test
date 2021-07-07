@@ -1,0 +1,39 @@
+.navigation {
+    padding-left: 1em;
+}
+
+.navigation__btn {
+    transition: all 0.5s ease-in-out;
+}
+
+.navigation__btn:hover {
+    background-color: #EDEDED;
+    color:#005AAA;
+}
+
+.navigation__header, .navigation__down {
+    color: #7C848B; 
+}
+
+.navigation__down{
+    padding-left: 1em;
+}
+
+.navigation__icon{
+    height: 1em;
+    width: 1em;
+    color: #7C848B;
+    padding-right: 1em;
+}
+
+.navigation__name{
+    display: inline-block;
+    text-align: start;
+    min-width: 13em;
+}
+
+.name__wrapper{
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
