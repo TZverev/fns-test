@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ArrowSVG } from '../../../features/svg';
 import BlockList from '../block-list';
 import InspHistoryItem from './insp-history-item';
@@ -7,6 +7,19 @@ import './insp.css';
 
 const InspHistory = () => {
     const [isOpen, toggleOpen] = useState(false);
+    const [style, setStyle] = useState({ height: '3em' });
+    const list = useRef(null);
+    const wrapper = useRef(null);
+
+    useEffect(() => {
+        if (list.current && wrapper.current) {
+            wrapper.current.addEventListener('transitionend', () => {
+                setStyle({ height: '100%' })
+            })
+            setStyle({ height: list.current.offsetHeight + 'px' })
+        }
+    }, [isOpen])
+
 
     return (
         <>
@@ -22,9 +35,14 @@ const InspHistory = () => {
                 </button>
                 :
                 <div className='card--big card card--secondary insp__card'>
-                    <div className='list__body'>
-                        <BlockList BlockItem={InspHistoryItem}
-                            state={state} />
+                    <div className='insp__wrapper'
+                        ref={wrapper}
+                        style={style}>
+                        <div className='list__body'
+                            ref={list}>
+                            <BlockList BlockItem={InspHistoryItem}
+                                state={state} />
+                        </div>
                     </div>
                 </div>
             }
